@@ -1,0 +1,8 @@
+# Project exclude paths
+/spring-cloud-alibaba-commons/target/
+/spring-cloud-alibaba-email-server/target/
+/spring-cloud-alibaba-nacos-consumer/target/
+/spring-cloud-alibaba-nacos-consumer-feign/target/
+/spring-cloud-alibaba-nacos-provider/target/
+/spring-cloud-alibaba-oauth/target/
+/spring-cloud-gateway/target/
