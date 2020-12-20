@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-cloud-alibaba-email-server" />
+        <module name="spring-cloud-alibaba-nacos-provider" />
+        <module name="spring-cloud-alibaba-common" />
+        <module name="spring-cloud-alibaba-oauth" />
+        <module name="spring-cloud-alibaba-commons" />
+        <module name="spring-cloud-alibaba-nacos-consumer-feign" />
+        <module name="spring-cloud-gateway" />
+        <module name="spring-cloud-alibaba-nacos-consumer" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spring-cloud-alibaba-auth" target="1.8" />
+      <module name="spring-cloud-alibaba-common" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="spring-cloud-alibaba-auth" options="-parameters" />
+      <module name="spring-cloud-alibaba-common" options="-parameters" />
+      <module name="spring-cloud-alibaba-commons" options="-parameters" />
+      <module name="spring-cloud-alibaba-dependencies" options="-parameters" />
+      <module name="spring-cloud-alibaba-email-server" options="-parameters" />
+      <module name="spring-cloud-alibaba-nacos-consumer" options="-parameters" />
+      <module name="spring-cloud-alibaba-nacos-consumer-feign" options="-parameters" />
+      <module name="spring-cloud-alibaba-nacos-provider" options="-parameters" />
+      <module name="spring-cloud-alibaba-oauth" options="-parameters" />
+      <module name="spring-cloud-gateway" options="-parameters" />
+    </option>
+  </component>
+</project>
