@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: email-server
+  mail:
+    # 设置邮箱主机
+    host: smtp.163.com
+    # 非SSL的端口
+    port: 25
+    # 默认即为smtp
+    protocol: smtp
+    # 设置用户名
+    username: kc_windsoft@163.com
+    # 设置密码，该处的密码是QQ邮箱开启SMTP的授权码而非登录密码
+    password: YLKGCKYQQSPMTHYS
+    # 默认即为utf8
+    default-encoding: utf-8
+  redis:
+    host: localhost
+    password: ''
+    port: 16379
+    jedis:
+      pool:
+        max-wait: 30000
+        max-active: 100
+        max-idle: 20
+        min-idle: 0
+    timeout: 3000
+server:
+  port: 9300
