@@ -1,5 +1,7 @@
 package com.windsoft.oauth.configure;
 
+import com.windsoft.oauth.security.config.EmailSecurityConfigurerAdapter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -18,13 +20,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
-//    @Resource
-//    private EmailCodeAuthenticationSecurityConfig emailCodeAuthenticationSecurityConfig;
+    @Autowired
+    private EmailSecurityConfigurerAdapter emailSecurityConfigurerAdapter;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/oauth/**","/login/**","/logout/**")
+                .antMatchers("/oauth/**","/login/**","/logout/**","/email/token")
                 .permitAll()
                 .anyRequest()
                 .authenticated()
@@ -32,7 +34,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin()
                 .permitAll()
                 .and()
-                .csrf().disable();
+                .csrf().disable()
+                .apply(emailSecurityConfigurerAdapter);
     }
 
     @Bean

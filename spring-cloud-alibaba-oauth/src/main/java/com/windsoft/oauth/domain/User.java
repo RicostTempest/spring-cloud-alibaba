@@ -16,7 +16,7 @@ import java.util.List;
 @Table(name = "`user`")
 public class User implements UserDetails {
     /**
-     *   
+     *
      */
     @Id
     @Column(name = "id")
@@ -27,6 +27,9 @@ public class User implements UserDetails {
 
     @Column(name = "`password`")
     private String password;
+
+    @Column(name = "`email`")
+    private String email;
 
     private List<GrantedAuthority> authorities;
 
